@@ -29,7 +29,7 @@ import cn.hutool.json.JSONUtil;
 import wf.bitcoin.javabitcoindrpcclient.BitcoinJSONRPCClient;
 import wf.bitcoin.javabitcoindrpcclient.BitcoindRpcClient.Unspent;
 
-public class BitcoinWalletExample {
+public class BitcoinOffLineSignatureExample {
 	//bitcoin主网参数
 	private static NetworkParameters parameters = MainNetParams.get();
 	private static BitcoinJSONRPCClient rpcClient = null;
@@ -44,7 +44,7 @@ public class BitcoinWalletExample {
 	}
 	
 	public static void main(String s[]) {
-		BitcoinWalletExample walletExample = new BitcoinWalletExample();
+		BitcoinOffLineSignatureExample walletExample = new BitcoinOffLineSignatureExample();
 		//接收方 <地址,金额>
 		Map<String, BigDecimal> receiverMap = new HashMap<>();
 		receiverMap.put("1JDZXL6YEfb2Ac9yk2X4h64vy9MvHSeh4Q", BigDecimal.valueOf(0.00001));
