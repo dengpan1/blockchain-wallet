@@ -57,5 +57,6 @@
 
   <modules>
     <module>bitcoin-wallet-example</module>
+    <module>filecoin-wallet-example</module>
   </modules>
 </project>
