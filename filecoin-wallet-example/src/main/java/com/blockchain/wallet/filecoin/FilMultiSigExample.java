@@ -150,7 +150,7 @@ public class FilMultiSigExample {
 
 		serializedProposalParams = ArrayUtils.subarray(serializedProposalParams, 1, serializedProposalParams.length);
 
-		byte[] hash = FilecoinSign.createHash(serializedProposalParams);
+		byte[] hash = FilSign.createHash(serializedProposalParams);
 	
 		list = new ArrayList<>();
 		list.add(new CborObject.CborLong(messageId));
@@ -285,8 +285,8 @@ public class FilMultiSigExample {
     	CborObject.CborList cborList = new CborObject.CborList(list);
         byte[] encodedBytes = cborList.toByteArray();
         
-        byte[] cidHashBytes = FilecoinSign.getCidHash(encodedBytes);
-        return FilecoinSign.sign(cidHashBytes,priKeyAsHex);
+        byte[] cidHashBytes = FilSign.getCidHash(encodedBytes);
+        return FilSign.sign(cidHashBytes,priKeyAsHex);
     }
     
     public static byte[] unsigned(BigInteger value) {
